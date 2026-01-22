@@ -1,0 +1,5 @@
+{
+  "name": "Gas Town Convoys",
+  "description": "An industrial-styled dashboard for monitoring Gas Town convoys, refinery pipelines, and polecat worker status.",
+  "requestFramePermissions": []
+}

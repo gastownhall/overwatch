@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Gas Town Convoys</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&family=Rye&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Crimson Text"', 'serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+              display: ['"Rye"', 'serif'],
+            },
+            colors: {
+              industrial: {
+                950: '#140d0a', // Deepest soot
+                900: '#1f1612', // Dark leather
+                850: '#2a1d18', // Deep bronze shadow
+                800: '#38251b', // Aged wood
+                700: '#4d3324', // Rust
+                600: '#6b4731', // Clay
+                500: '#8c5e3c', // Leather
+                400: '#b0815d', // Terracotta
+                300: '#d4a373', // Sand
+                200: '#e6ccb2', // Parchment
+                100: '#f5ebe0', // Bone
+              },
+              brass: {
+                900: '#422f08',
+                800: '#75540e',
+                700: '#a67c13',
+                600: '#c69519',
+                500: '#e1ad21', // Main brass
+                400: '#f0c24b',
+                300: '#fad978',
+                200: '#fcecb3',
+              },
+              copper: {
+                900: '#3d1608',
+                700: '#8a3311',
+                500: '#c25423',
+                400: '#e0764d',
+              },
+              amber: {
+                glow: '#ffae00',
+                glass: '#ffcc00',
+              }
+            },
+            backgroundImage: {
+              'brass-gradient': 'linear-gradient(135deg, #75540e 0%, #c69519 50%, #75540e 100%)',
+              'copper-gradient': 'linear-gradient(135deg, #3d1608 0%, #8a3311 100%)',
+              'steampunk-dark': 'radial-gradient(circle at center, #2a1d18 0%, #140d0a 100%)',
+            },
+            boxShadow: {
+              'glow-amber': '0 0 15px rgba(255, 174, 0, 0.4)',
+              'glow-brass': '0 0 10px rgba(198, 149, 25, 0.3)',
+              'panel-inset': 'inset 2px 2px 5px rgba(0,0,0,0.7), inset -1px -1px 1px rgba(255,255,255,0.05)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #140d0a;
+        color: #e6ccb2;
+      }
+      .rivet {
+        box-shadow: inset 1px 1px 1px rgba(255,255,255,0.4), 1px 1px 3px rgba(0,0,0,0.9);
+        background: radial-gradient(circle at 30% 30%, #f0c24b, #75540e);
+      }
+      .panel-texture {
+        background-image: repeating-linear-gradient(
+          45deg,
+          rgba(0, 0, 0, 0.05),
+          rgba(0, 0, 0, 0.05) 2px,
+          transparent 2px,
+          transparent 4px
+        );
+      }
+      /* Scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1f1612; 
+        border-left: 1px solid #38251b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #75540e; 
+        border: 1px solid #38251b;
+        border-radius: 2px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a67c13;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

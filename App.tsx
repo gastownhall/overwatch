@@ -10,7 +10,7 @@ import { Convoy, ConvoyStatus, GtConvoyStatus, transformGtConvoy, calculateStats
 type ViewMode = 'list' | 'grid';
 type FilterMode = 'all' | ConvoyStatus;
 
-const WS_URL = 'ws://localhost:3001';
+const WS_URL = 'ws://localhost:3003';
 
 interface WsMessage {
   type: string;
